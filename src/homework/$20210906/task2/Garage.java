@@ -33,14 +33,11 @@ public class Garage {
     }
 
     public void carByBrandCount(String brand) {
-        int count = 0;
         for (Map.Entry<Car, Integer> entry : garage.entrySet()) {
             if(entry.getKey().getBrand().equals(brand)) {
-                count +=entry.getValue();
+                System.out.println("автомобилей " + brand + " на парковке " + entry.getValue() + "!");
             }
         }
-
-        System.out.println("автомобилей " + brand + " на парковке " + count + "!");
     }
 
     public void printAllCars() {
